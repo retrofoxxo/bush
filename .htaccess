@@ -1,0 +1,30 @@
+Options +MultiViews
+RewriteEngine on
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+RewriteRule ^users$ /user/register.php
+RewriteRule ^users/me$ /user/aboutown.php
+RewriteRule ^users/authenticate$ /user/authenticate.php
+RewriteRule ^users/(.*)/preferences$ /user/profile/preferences.php?id=$1
+RewriteRule ^users/(.*)/edition$ /user/profile/edition.php?id=$1
+RewriteRule ^users/(.*)/notifications/grouped$ /user/profile/notificationsgrouped.php?id=$1
+RewriteRule ^users/(.*)/activityCounts$ /user/profile/activityCounts.php?id=$1
+RewriteRule ^users/search/(.*)$ /search/profiles.php?query=$1
+RewriteRule ^users/profiles/(.*)$ /user/profile/profile.php?id=$1
+RewriteRule ^users/(.*)/(.*)$ /user/profile/unimplemented.php?id=$1
+RewriteRule ^users/(.*)$ /user/profile/index.php?id=$1
+RewriteRule ^timelines/users/(.*)$ /timeline/user.php?id=$1
+RewriteRule ^timelines/graph$ /timeline/graph.php
+RewriteRule ^upload/thumbs/(.*)$ /upload/thumb.php?name=$1
+RewriteRule ^upload/avatars/(.*)$ /upload/avatar.php?name=$1
+RewriteRule ^upload/videos/(.*)$ /upload/video.php?name=$1
+RewriteRule ^tags/search/(.*)$ /search/tags.php?query=$1
+RewriteRule ^posts$ /uploadvine.php
+
+php_flag display_errors on
+
+ErrorDocument 404 /404
+ErrorDocument 403 /ip_ban
+ErrorDocument 500 /404
