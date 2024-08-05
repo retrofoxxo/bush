@@ -3,7 +3,7 @@ A vine  replacement server. Made with PHP
 
 This server is in no terms finished but the status of all the features are listed below
 
-- what works completely -
+\- what works completely -
 Uploading Vines
 Updating profile
 Uploading an profile picture
@@ -12,10 +12,10 @@ Search
 Sign in
 Registration
 
-- What works partially -
+\- What works partially -
 Deleting an profile picture
 
-- What doesn't work -
+\- What doesn't work -
 Notifications
 Updating settings
 Any integration with the Twitter API
