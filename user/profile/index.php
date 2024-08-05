@@ -78,6 +78,21 @@ echo '{"code": 420, "data": "", "success": false, "error": "Please try again lat
 }
 
 $stmt->close();
+} else if (isset($put['avatarUrl'])) {
+$avatarUrl = $put['avatarUrl'];
+// Prepare the SQL query to update account
+$sql = "UPDATE accounts SET picture = ? WHERE SID = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $avatarUrl, $sid);
+if ($stmt->execute() === TRUE) {
+echo '{"code": "", "data": {}, "success": true, "error": ""}';
+} else {
+header('HTTP/1.1 500 Internal Server Error');
+header('Content-Type: application/json');
+echo '{"code": 420, "data": "", "success": false, "error": "Please try again later."}';
+}
+
+$stmt->close();
 } else {
 echo '{"code": "", "data": {}, "success": true, "error": ""}';
 }
