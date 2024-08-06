@@ -22,6 +22,7 @@ RewriteRule ^upload/avatars/(.*)$ /upload/avatar.php?name=$1
 RewriteRule ^upload/videos/(.*)$ /upload/video.php?name=$1
 RewriteRule ^tags/search/(.*)$ /search/tags.php?query=$1
 RewriteRule ^posts$ /uploadvine.php
+RewriteRule ^complaints/menu$ /reporting/menu.php
 
 php_flag display_errors on
 
