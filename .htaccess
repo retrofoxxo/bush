@@ -9,6 +9,7 @@ RewriteRule ^users/me$ /user/aboutown.php
 RewriteRule ^users/authenticate$ /user/authenticate.php
 RewriteRule ^users/(.*)/preferences$ /user/profile/preferences.php?id=$1
 RewriteRule ^users/(.*)/edition$ /user/profile/edition.php?id=$1
+RewriteRule ^users/(.*)/notifications/settings$ /user/profile/notificationsettings.php?id=$1
 RewriteRule ^users/(.*)/notifications/grouped$ /user/profile/notificationsgrouped.php?id=$1
 RewriteRule ^users/(.*)/activityCounts$ /user/profile/activityCounts.php?id=$1
 RewriteRule ^users/search/(.*)$ /search/profiles.php?query=$1
