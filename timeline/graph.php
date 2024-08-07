@@ -18,7 +18,7 @@ header('Content-Type: application/json');
 ?>
 <?php
 // SQL query to select rows
-$sql = "SELECT * FROM vines";
+$sql = "SELECT * FROM vines ORDER BY id DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -52,7 +52,7 @@ header('Content-Type: application/json');
 <?php
 // SQL query to select rows containing the searched word
 $cid = $_GET['id'];
-$sql = "SELECT * FROM vines WHERE uploaderId = '$cid'";
+$sql = "SELECT * FROM vines WHERE uploaderId = '$cid' ORDER BY id DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
