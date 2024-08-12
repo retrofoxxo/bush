@@ -52,7 +52,7 @@ $color = $account_row['color'];
 $verified = $account_row['verified'];
 $avatarUrl = $account_row['picture'];
 if ($account_row['description'] == "") {
-$description = null;
+$description = '""';
 } else {
 $description = '"' . $account_row['description'] . '"';
 }
