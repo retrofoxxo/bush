@@ -7,6 +7,7 @@ RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 RewriteRule ^users$ /user/register.php
 RewriteRule ^users/me$ /user/aboutown.php
 RewriteRule ^users/authenticate$ /user/authenticate.php
+RewriteRule ^posts/(.*)/comments$ /post/comments.php?id=$1
 RewriteRule ^users/(.*)/preferences$ /user/profile/preferences.php?id=$1
 RewriteRule ^users/(.*)/edition$ /user/profile/edition.php?id=$1
 RewriteRule ^users/(.*)/notifications/settings$ /user/profile/notificationsettings.php?id=$1
