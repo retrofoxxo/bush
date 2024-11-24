@@ -23,3 +23,5 @@ Features that don't work
 - DM's
 - Explore Highlights
 - Favoriting Users
+- Multiple Sessions
+- Force Sign out when neccessary
