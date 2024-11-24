@@ -25,3 +25,5 @@ Features that don't work
 - Favoriting Users
 - Multiple Sessions
 - Force Sign out when neccessary
+- Email verification
+- Phone Number verification
